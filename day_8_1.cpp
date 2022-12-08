@@ -1,14 +1,14 @@
 #include <iostream>
 
-char mat[100][100];
-
-char top[100][100];
-char bottom[100][100];
-char left[100][100];
-char right[100][100];
-
 #define WIDTH 99
 #define HEIGHT 99
+
+char mat[HEIGHT][WIDTH];
+
+char top[HEIGHT][WIDTH];
+char bottom[HEIGHT][WIDTH];
+char left[HEIGHT][WIDTH];
+char right[HEIGHT][WIDTH];
 
 bool visible(int i, int j) {
     if (i == 0 || i == HEIGHT - 1 || j == 0 || j == WIDTH - 1) {
