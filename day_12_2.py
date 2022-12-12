@@ -10,16 +10,16 @@ cache = [[-1]*cols for _ in range(rows)]
 queue = deque()
 
 for i, line in enumerate(content):
+    content[i] = content[i].replace('S', 'a')
+
     for j, c in enumerate(line):
-        if line[j] == 'a' or line[j] == 'S':
+        if line[j] == 'a':
             queue.append((i, j))
             cache[i][j] = 0
 
     if 'E' in line:
         end = (i, line.find('E'))
-    
-    content[i] = content[i].replace('S', 'a')
-    content[i] = content[i].replace('E', 'z')
+        content[i] = content[i].replace('E', 'z')
 
 mx = [1, 0, -1, 0]
 my = [0, 1, 0, -1]
