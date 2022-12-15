@@ -17,9 +17,6 @@ def get_a(line):
 def get_b(line):
     return line[0].y - line[0].x * get_a(line)
 
-def get_ab(line):
-    return (get_a(line), get_b(line))
-
 for line in content:
     sx, sy, bx, by = map(int, re.findall(r'(-?\d+)', line))
 
