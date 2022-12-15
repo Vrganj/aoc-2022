@@ -1,8 +1,5 @@
 from collections import namedtuple
-import time
 import re
-
-start = time.process_time()
 
 Point = namedtuple('Point', 'x y')
 
